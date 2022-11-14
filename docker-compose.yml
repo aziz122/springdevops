@@ -14,8 +14,8 @@ services:
      - /home/mysql/data:/var/lib/mysql --user 1000
 
   spring_app:
-   image: dhaferslimi23/Dhafer
-   container_name: Dhafer
+   image: dhaferslimi23/dhafer
+   container_name: dhafer
    ports:
     - 8089:8089
    environment:

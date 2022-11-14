@@ -1,0 +1,6 @@
+stage('Compilation du Projet'){
+            steps{
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Mohamedbenmiled/Pipeline2']]])
+                bat 'mvn clean install'
+            }
+        }

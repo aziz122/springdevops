@@ -1,3 +1,3 @@
 FROM openjdk:8-jdk-alpine
-COPY target/tpAchatProject-1.0.jar tpAchatProject.jar
-ENTRYPOINT ["java", "-jar", "/tpAchatProject.jar"]
+COPY target/SpringDevopsApplication-1.0.jar SpringDevopsApplication.jar
+ENTRYPOINT ["java", "-jar", "/SpringDevopsApplication.jar"]

@@ -5,6 +5,8 @@ pipeline {
     
 
     stages {
+	    
+	    
         stage('Pull GIT') {
             steps {
                 echo 'Pulling...';
@@ -14,22 +16,22 @@ pipeline {
             }
         }
         
+	    
+	    
         stage('Maven Package') {
             steps {
                 sh "chmod +x mvnw "
                 sh "./mvnw package"
-                
             }
         }
 
+	    
+	    
   stage('Test') {
             steps {
-		
                 sh "./mvnw test"  
-		    
                 junit '*/target/surefire-reports/TEST-.xml'
-            } 
-           
+            }  
         }
         
         
@@ -41,12 +43,14 @@ pipeline {
               sh """./mvnw sonar:sonar \
   -Dsonar.projectKey=project \
   -Dsonar.host.url=http://localhost:9000 \
-    
-               
-       }
-    }   
-}
+                  }
+                                                         }   
+							 
+                                    }
+				    
+				    
+				    
         
+	
     }   
 }
-
